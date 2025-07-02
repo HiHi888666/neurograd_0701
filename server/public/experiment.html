@@ -13,6 +13,10 @@
     <link href="img/favicon.ico" rel="icon">
 
 </head>
+
+<body></body>
+
+<script>
 // just copy paste this somewhere at the top
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -21,9 +25,6 @@
   var SUFFIX = 'unknown'
   if (urlParams.has('SUFFIX')) {SUFFIX = '_' + urlParams.get('SUFFIX');}
 
-<body></body>
-
-<script>
 
     // retrieve information
 
@@ -135,7 +136,7 @@
 
     // block definition   
     var includedCategories = ['vegetables', 'fruits'];
-    var setSizes = [3, 6];
+    var setSizes = [1, 2];
     var mapSR = [[0], [0, 1]];
     var blockTrials = [expdef.defaultRepetition, expdef.defaultRepetition];
 
@@ -298,7 +299,7 @@
     }
 
     // main timeline, will only run once
-    var main_timeline = [experimentIntro, block_timeline, experimentEnd];
+    var main_timeline = [experimentIntro,enter_fullscreen, block_timeline, experimentEnd];
 
 
     jsPsych.run(main_timeline);
